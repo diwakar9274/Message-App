@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center">
+	<%= image_tag 'chat.png',height: '150',width: '150' %>
+</div>
+
+<div class="row mt-5">
+	<div class="card shadow-box col-7 h-450">
+	  <div class="card-body">
+	   <%= render @messages %>
+	  </div>
+	  <div class="card-footer">
+	  	<div class="form-group">
+	      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Message">
+		</div>
+	    <a href="#" class="btn btn-primary">Go somewhere</a>
+	  </div>
+	</div>
+	<div class="card offset-1 col-4">
+	  <div class="card-header">
+	    Featured
+	  </div>
+	  <ul class="list-group list-group-flush">
+	    <li class="list-group-item">Cras justo odio</li>
+	    <li class="list-group-item">Dapibus ac facilisis in</li>
+	    <li class="list-group-item">Vestibulum at eros</li>
+	  </ul>
+	</div>
+</div>
