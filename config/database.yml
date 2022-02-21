@@ -17,5 +17,5 @@ test:
   encoding: unicode
   database: myapp_test
   pool: 5
-  username: diwakar
+  username: deewakar
   password: diwakar8565.-
