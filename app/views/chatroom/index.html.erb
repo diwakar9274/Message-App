@@ -1,3 +1,4 @@
+
 <div class="d-flex justify-content-center">
 	<%= image_tag 'chat.png',height: '150',width: '150' %>
 </div>
@@ -5,13 +6,17 @@
 <div class="row mt-5">
 	<div class="card shadow-box col-7 h-450">
 	  <div class="card-body">
-	   <%= render @messages %>
+	  	<div  id="message_container">
+	   		<%= render @messages %>
+	   	</div>
 	  </div>
 	  <div class="card-footer">
-	  	<div class="form-group">
-	      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Message">
-		</div>
-	    <a href="#" class="btn btn-primary">Go somewhere</a>
+	  	<%= form_with model: @message,remote: true do |f| %>
+		  	<div class="form-group">
+		  		<%= f.text_field :body,class:"form-control",id:"exampleInputEmail1",placeholder: "Message" %>
+				</div>
+		    <%= f.submit 'Message', data: { disable_with: false },class:"btn btn-primary",id:"submit" %>
+		   <% end %>
 	  </div>
 	</div>
 	<div class="card offset-1 col-4">
@@ -25,3 +30,4 @@
 	  </ul>
 	</div>
 </div>
+
